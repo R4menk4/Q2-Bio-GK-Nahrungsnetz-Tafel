@@ -1,0 +1,15 @@
+Bildnachweis und Erzeugung
+23.11.2026 · integriertes Imagegen-Werkzeug · lokale Vorschau
+Naturgetreue KI-Illustrationen, keine Fotografien oder Bestimmungsbilder. Größen nicht maßstabsgetreu.
+
+Datei: assets/organismen/turmfalke-render.png
+Prompt: Use case: scientific-educational. Create one photorealistic natural-history rendered image card for German upper-secondary biology. Subject: adult male common kestrel Falco tinnunculus, perched upright with both feet visible, grey head, rusty brown spotted back, pale spotted breast, long grey tail with dark terminal band, full body. Isolated on clean white background, centered with generous margin, softly lit, crisp lifelike texture and realistic proportions. Mature natural history museum style, not cartoon, not cute toy, not geometric, no labels, no text, no watermark. Square composition.
+
+Datei: assets/organismen/feldmaus-render.png
+Prompt: Use case: scientific-educational. Create one photorealistic natural-history rendered image card for German upper-secondary biology. Subject: common vole Microtus arvalis, side three quarter view, compact rounded body, short tail, small rounded ears, blunt muzzle, natural brown grey fur, full body. Isolated on clean white background, centered with generous margin, softly lit, crisp lifelike texture and realistic proportions. Mature natural history museum style, not cartoon, not cute toy, not geometric, no labels, no text, no watermark. Square composition.
+
+Datei: assets/organismen/grashuepfer-render.png
+Prompt: Use case: scientific-educational. Create one photorealistic natural-history rendered image card for German upper-secondary biology. Subject: adult male meadow grasshopper Pseudochorthippus parallelus, anatomically accurate six legs including two enlarged folded hind legs, short antennae, green brown coloration, side view, full body. Isolated on clean white background, centered with generous margin, softly lit, crisp lifelike texture and realistic proportions. Mature natural history museum style, not cartoon, not cute toy, not geometric, no labels, no text, no watermark. Square composition.
+
+Datei: assets/organismen/wiesengras-render.png
+Prompt: Use case: scientific-educational. Create one photorealistic natural-history rendered image card for German upper-secondary biology. Subject: a single small tuft of Kentucky bluegrass Poa pratensis, narrow green leaves and delicate open branched panicles, complete aboveground plant, botanical specimen. Isolated on clean white background, centered with generous margin, softly lit, crisp lifelike texture and realistic proportions. Mature natural history museum style, not cartoon, not cute toy, not geometric, no labels, no text, no watermark. Square composition.

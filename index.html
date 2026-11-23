@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nahrungsnetz auf der Wiese · Tafel</title>
+  <link rel="stylesheet" href="tafel.css">
+</head>
+<body>
+  <header>
+    <div><small>Q2 BIOLOGIE · GRUNDKURS</small><h1>Nahrungsbeziehungen auf der Wiese</h1></div>
+    <button id="full">Vollbild</button>
+  </header>
+  <main>
+    <div class="prompt"><span id="count"></span><h2 id="question"></h2></div>
+    <section id="definitions" aria-label="Begriffe erklären">
+      <article data-definition="0"><span>1. Trophieebene</span><h2>Produzenten</h2><p>Bauen durch <strong>Fotosynthese</strong> aus Kohlenstoffdioxid und Wasser organische Stoffe auf.</p><p>Nutzen dafür <strong>Lichtenergie</strong>.</p></article>
+      <article data-definition="1"><span>2. Trophieebene</span><h2>Konsumenten<br>1. Ordnung</h2><p>Nehmen organische Stoffe mit ihrer Nahrung auf.</p><p>Fressen <strong>Produzenten</strong>.</p></article>
+      <article data-definition="2"><span>3. Trophieebene</span><h2>Konsumenten<br>2. Ordnung</h2><p>Nehmen organische Stoffe mit ihrer Nahrung auf.</p><p>Fressen <strong>Konsumenten 1. Ordnung</strong>.</p></article>
+    </section>
+    <section id="diagram" hidden aria-label="Interaktive Zuordnung und Nahrungsnetz">
+      <p id="instruction"></p>
+      <div class="board" id="board">
+        <div class="levels">
+          <section class="band top" data-zone="3">
+            <button class="level" type="button" data-destination="3"><span>3. Trophieebene</span><strong>Konsumenten 2. Ordnung</strong></button>
+            <div class="cards" id="level-3"></div>
+          </section>
+          <section class="band middle" data-zone="2">
+            <button class="level" type="button" data-destination="2"><span>2. Trophieebene</span><strong>Konsumenten 1. Ordnung</strong></button>
+            <div class="cards" id="level-2"></div>
+          </section>
+          <section class="band bottom" data-zone="1">
+            <button class="level" type="button" data-destination="1"><span>1. Trophieebene</span><strong>Produzenten</strong></button>
+            <div class="cards" id="level-1"></div>
+          </section>
+        </div>
+        <section class="tray" data-zone="0" aria-label="Kartenablage">
+          <button class="level tray-title" type="button" data-destination="0">Kartenablage</button>
+          <div class="cards" id="level-0">
+            <button class="species" type="button" data-species="grass"><img src="assets/organismen/wiesengras-render.png" alt="" draggable="false"><strong>Wiesenrispen<wbr>gras</strong></button>
+            <button class="species" type="button" data-species="bird"><img src="assets/organismen/turmfalke-render.png" alt="" draggable="false"><strong>Turmfalke</strong></button>
+            <button class="species" type="button" data-species="hopper"><img src="assets/organismen/grashuepfer-render.png" alt="" draggable="false"><strong>Gemeiner Grashüpfer</strong></button>
+            <button class="species" type="button" data-species="mouse"><img src="assets/organismen/feldmaus-render.png" alt="" draggable="false"><strong>Feldmaus</strong></button>
+          </div>
+        </section>
+        <svg id="arrows" aria-hidden="true">
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087477"/></marker></defs>
+          <g id="edgePaths"></g>
+          <path id="draft" hidden></path>
+        </svg>
+      </div>
+      <details class="food">
+        <summary>Ernährungsangaben</summary>
+        <p>Wiesenrispengras betreibt Fotosynthese. Feldmäuse und Gemeine Grashüpfer fressen Gräser. Turmfalken fressen vor allem Feldmäuse, daneben auch Heuschrecken.</p>
+      </details>
+      <div id="connections" hidden>
+        <div id="edgeList" aria-label="Gezeichnete Nahrungspfeile"></div>
+      </div>
+      <div class="actions">
+        <button id="check" type="button">Zuordnung prüfen</button>
+        <button id="solution" type="button">Lösung zeigen</button>
+        <p id="feedback" role="status"></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <button id="back">Zurück</button><button id="reset">Von vorn</button><button id="next">Weiter</button>
+    <a id="student" hidden href="https://r4menk4.github.io/Q2-Bio-GK-Oekologie/nahrungsnetz/">Zum Tangwald-Transfer</a>
+    <small>KI-generierte Bildkarten · Größen nicht maßstabsgetreu</small>
+  </footer>
+  <script src="tafel.js"></script>
+</body>
+</html>

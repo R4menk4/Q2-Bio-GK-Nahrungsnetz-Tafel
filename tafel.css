@@ -1,0 +1,66 @@
+:root{font-family:Arial,sans-serif;color:#173b3b;background:#f4f7f5}
+*{box-sizing:border-box}
+body{margin:0}
+header,footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 4vw;background:white}
+h1{font-size:clamp(24px,2.8vw,38px);margin:5px 0}
+header small{letter-spacing:2px}
+button,a{font:inherit;font-size:clamp(16px,1.35vw,19px);padding:10px 16px;border:1px solid #729491;border-radius:10px;background:white;color:#173b3b;cursor:pointer}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #bf7816;outline-offset:2px}
+#next{background:#087477;color:white}
+main{max-width:1500px;margin:auto;padding:8px 3vw}
+.prompt{display:flex;align-items:center;gap:16px;min-height:62px}
+h2{font-size:clamp(23px,2.3vw,32px);margin:8px 0}
+#count{font-weight:bold;white-space:nowrap;color:#087477}
+#definitions{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;min-height:52vh;align-content:center}
+#definitions article{background:white;border-top:6px solid #087477;border-radius:12px;padding:28px;font-size:clamp(20px,2.1vw,30px);line-height:1.45}
+#definitions article:first-child{border-color:#5c853e}
+#definitions article:nth-child(3){border-color:#ae7136}
+#definitions article span{font-size:18px;color:#526b67}
+#instruction{font-size:clamp(17px,1.45vw,22px);margin:0 0 12px;line-height:1.4}
+.board{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(145px,19%);gap:10px}
+.board.drawing{grid-template-columns:1fr}
+.levels{display:grid;gap:6px;grid-template-rows:repeat(3,1fr)}
+.band{display:grid;grid-template-columns:minmax(135px,27%) minmax(0,1fr);align-items:center;padding:6px 14px;border:1px solid #d5e1dc;border-radius:12px;min-height:clamp(130px,18vh,190px)}
+.top{background:#fff7e9}
+.middle{background:#edf6fb}
+.bottom{background:#eaf5e9}
+.level{border:0;background:transparent;text-align:left;font-size:clamp(16px,1.7vw,23px);padding:6px;justify-self:start}
+.level span,.level strong{display:block}
+.level span{font-size:.78em;margin-bottom:4px}
+.level:disabled{opacity:1}
+.cards{display:flex;justify-content:space-evenly;align-items:center;gap:9px}
+.tray{background:white;border:1px solid #d5e1dc;border-radius:12px;display:flex;flex-direction:column;align-items:center;padding:6px;gap:4px}
+.tray-title{align-self:center;font-size:17px;font-weight:bold}
+.tray .cards{flex:1;flex-direction:column;justify-content:space-around;width:100%;gap:4px}
+.species{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;position:relative;z-index:1;width:min(100%,178px);min-width:0;padding:4px 6px;background:#fff;border:1px solid #c8d8d0;box-shadow:0 2px 7px #173b3b16;touch-action:none;user-select:none;cursor:grab}
+.species img{height:clamp(65px,11vh,120px);width:100%;object-fit:contain;pointer-events:none}
+.species strong{font-size:clamp(12px,1.35vw,18px);line-height:1.1;overflow-wrap:anywhere}
+.tray .species img{height:clamp(49px,7.2vh,85px)}
+.species.selected,.species.target{box-shadow:0 0 0 3px #087477}
+.band.target,.tray.target{outline:3px solid #087477;outline-offset:-3px}
+.drawing .species{cursor:crosshair}
+.ghost{position:fixed;z-index:10;pointer-events:none;opacity:.85;transform:translate(-50%,-50%)}
+#arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:visible}
+#edgePaths path,#draft{fill:none;stroke:#087477;stroke-width:4;marker-end:url(#arrow)}
+#draft{stroke-dasharray:7 6}
+.food,.actions{margin:10px 0;font-size:clamp(16px,1.35vw,20px)}
+.food summary{cursor:pointer;width:fit-content}
+.food p{margin:5px 0;line-height:1.4}
+.actions,#edgeList{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+#feedback{margin:0;line-height:1.35}
+#edgeList button{font-size:15px;padding:6px 10px}
+footer{justify-content:center;flex-wrap:wrap}
+footer small{font-size:12px;color:#607470}
+[hidden]{display:none!important}
+@media(max-width:740px){
+  #definitions{grid-template-columns:1fr;gap:12px}
+  #definitions article{padding:16px}
+  .board{grid-template-columns:1fr}
+  .tray .cards{flex-direction:row}
+  .band{grid-template-columns:minmax(90px,27%) minmax(0,1fr);padding:6px;min-height:118px}
+  .level{font-size:14px}
+  .species{width:min(100%,120px)}
+  .prompt{gap:9px;flex-wrap:wrap;padding-bottom:8px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
